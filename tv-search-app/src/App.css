@@ -1,38 +1,72 @@
-.App {
+.container {
+  display: grid;
+  min-height: 100vh;
+  color: white;
+  background-color: black;
+}
+
+.bg-dark {
+  background-color: black;
+}
+
+.container h1 {
+  color: red;
+  padding: 0 2rem;
+}
+
+.container form {
+  margin: 2rem auto;
+}
+
+.container form label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.container form input {
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.container form button {
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container form button:hover {
+  opacity: 0.7;
+}
+
+.tvShows {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.w-30 {
+  width: 200px;
+}
+
+.noResult {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cardTitle {
+  font-weight: bold;
+  color: darkgray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 800px) {
+  .tvShows {
+    grid-template-columns: 1fr;
   }
 }
