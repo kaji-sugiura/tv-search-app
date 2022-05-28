@@ -20,12 +20,15 @@ function App() {
         .then((data) => data)
         .catch((e) => console.error(e));
 
+      console.log(res[0]);
       let results = res.map((res) => {
         return {
           id: res.show.id,
           name: res.show.name,
           img: res.show?.image?.medium,
           score: res.score.toFixed(2),
+          summary: res.show.summary,
+          schedule: res.show.schedule,
         };
       });
 

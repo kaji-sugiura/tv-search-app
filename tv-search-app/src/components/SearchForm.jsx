@@ -1,17 +1,20 @@
 import React from "react";
+import { BsSearch } from "react-icons/bs";
 
 export function SearchForm(props) {
   return (
     <form onSubmit={(e) => props.searchTvShows(e)}>
-      <label htmlFor="search">番組を検索</label>
       <input
         type="text"
-        placeholder="番組名を入力"
+        placeholder="tv show name"
         id="search"
         value={props.programName}
         onChange={(e) => props.onChangeProgramName(e)}
       />
-      <button>検索</button>
+      <button>
+        <BsSearch style={{ marginRight: "5px" }} />
+        search
+      </button>
     </form>
   );
 }
