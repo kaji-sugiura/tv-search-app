@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header";
-import { SearchForm } from "./components/SearchForm";
 import { TvShowTable } from "./components/TvShowTable";
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
         return {
           id: res.show.id,
           name: res.show.name,
-          img: res.show.image.medium,
+          img: res.show?.image?.medium,
           score: res.score.toFixed(2),
         };
       });
@@ -36,13 +35,12 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <SearchForm
+      <Header
         programName={programName}
         onChangeProgramName={onChangeProgramName}
         searchTvShows={searchTvShows}
       />
-      <TvShowTable tvShows={tvShows} />
+      <TvShowTable tvShows={tvShows} programName={programName} />
     </div>
   );
 }

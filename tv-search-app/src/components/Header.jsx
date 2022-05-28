@@ -1,9 +1,15 @@
 import React from "react";
+import { SearchForm } from "./SearchForm";
 
-export function Header() {
+export function Header(props) {
   return (
-    <header className="bg-dark">
+    <header className="header">
       <h1>TV SHOW</h1>
+      <SearchForm
+        programName={props.programName}
+        onChangeProgramName={props.onChangeProgramName}
+        searchTvShows={props.searchTvShows}
+      />
     </header>
   );
 }
