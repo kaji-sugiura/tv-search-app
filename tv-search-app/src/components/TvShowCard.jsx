@@ -29,8 +29,8 @@ export function TvShowCard(props) {
           dangerouslySetInnerHTML={{ __html: props.summary }}
           style={{ width: "330px" }}
         ></div>
-        <p>day：{props.schedule.days[0]}</p>
-        <p>time：{props.schedule.time}</p>
+        <p>day:{props.schedule.days[0]}</p>
+        <p>time:{props.schedule.time}</p>
       </CardDialog>
     </>
   );

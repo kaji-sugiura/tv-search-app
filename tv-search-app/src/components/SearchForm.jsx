@@ -8,8 +8,8 @@ export function SearchForm(props) {
         type="text"
         placeholder="tv show name"
         id="search"
-        value={props.programName}
-        onChange={(e) => props.onChangeProgramName(e)}
+        value={props.searchQuery}
+        onChange={(e) => props.onChangeSearchQuery(e)}
       />
       <button>
         <BsSearch style={{ marginRight: "5px" }} />

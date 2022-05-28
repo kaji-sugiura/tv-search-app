@@ -6,8 +6,8 @@ export function Header(props) {
     <header className="header">
       <h1>TV SHOW</h1>
       <SearchForm
-        programName={props.programName}
-        onChangeProgramName={props.onChangeProgramName}
+        searchQuery={props.searchQuery}
+        onChangeSearchQuery={props.onChangeSearchQuery}
         searchTvShows={props.searchTvShows}
       />
     </header>
